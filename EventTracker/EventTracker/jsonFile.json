@@ -1,0 +1,86 @@
+{
+    "Events" : {
+        
+        "Event1" : {
+            "EventName" : "Metallica Concert",
+            "imageURL"  :  "",
+            "venue"     :  "Palace Grounds",
+            "Event"     :  "Paid Entry"
+            
+        },
+        
+        "Event2" :{
+            "EventName" : "Saree Exhibition",
+            "imageURL"  :  "",
+            "venue"     :  "Malleswaram Grounds",
+            "Event"     :  "Free Entry"
+            
+        },
+        
+        "Event3" :{
+            "EventName" : "Wine tasting event",
+            "imageURL"  :  "",
+            "venue"     :  "Links Brewery",
+            "Event"     :  "Paid Entry"
+            
+        },
+        
+      "Event4" :  {
+            "EventName" : "Startups Meet",
+            "imageURL"  :  "",
+            "venue"     :  "Kanteerava Indoor Stadium",
+            "Event"     :  "Paid Entry"
+            
+        },
+        
+       "Event5" : {
+            "EventName" : "Summer Noon Party",
+            "imageURL"  :  "",
+            "venue"     :  "Kumara Park",
+            "Event"     :  "Paid Entry"
+            
+        },
+        
+       "Event6" : {
+            "EventName" : "Rock and Roll nights",
+            "imageURL"  :  "",
+            "venue"     :  "Sarjapur Road",
+            "Event"     :  "Paid Entry"
+            
+        },
+        
+        "Event7" : {
+            "EventName" : "Barbecue Fridays",
+            "imageURL"  :  "",
+            "venue"     :  "Whitefield",
+            "Event"     :  "Paid Entry"
+            
+        },
+        
+         "Event8" :{
+            "EventName" : "Summer workshop",
+            "imageURL"  :  "",
+            "venue"     :  "Indiranagar",
+            "Event"     :  "Free Entry"
+            
+        },
+        
+        "Event9" : {
+            "EventName" : "Impressions & Expressions",
+            "imageURL"  :  "",
+            "venue"     :  "MG Road",
+            "Event"     :  "Free Entry"
+            
+        },
+        
+        "Event10" : {
+            "EventName" : "Italian carnival",
+            "imageURL"  :  "",
+            "venue"     :  "Electronic City",
+            "Event"     :  "Free Entry"
+            
+        }
+        
+        
+    }
+}
