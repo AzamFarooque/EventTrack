@@ -26,10 +26,10 @@
 		A37BB4341E911C5500A58A3B /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37BB4331E911C5500A58A3B /* UserDetailViewController.swift */; };
 		A37BB4361E915DAC00A58A3B /* EventUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37BB4351E915DAC00A58A3B /* EventUtilities.swift */; };
 		A37BB4381E9173CB00A58A3B /* EventTrackListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37BB4371E9173CB00A58A3B /* EventTrackListViewController.swift */; };
-		A37BB43D1E91A67600A58A3B /* GenericAlertViewPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37BB4391E91A67600A58A3B /* GenericAlertViewPresentable.swift */; };
-		A37BB43E1E91A67600A58A3B /* StoryboardIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37BB43A1E91A67600A58A3B /* StoryboardIdentifiable.swift */; };
-		A37BB43F1E91A67600A58A3B /* UIStoryboard+Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37BB43B1E91A67600A58A3B /* UIStoryboard+Storyboards.swift */; };
-		A37BB4401E91A67600A58A3B /* UIViewController+StoryboardIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37BB43C1E91A67600A58A3B /* UIViewController+StoryboardIdentifier.swift */; };
+		A37BB44D1E91A7F300A58A3B /* GenericAlertViewPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37BB4491E91A7F300A58A3B /* GenericAlertViewPresentable.swift */; };
+		A37BB44E1E91A7F300A58A3B /* StoryboardIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37BB44A1E91A7F300A58A3B /* StoryboardIdentifiable.swift */; };
+		A37BB44F1E91A7F300A58A3B /* UIStoryboard+Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37BB44B1E91A7F300A58A3B /* UIStoryboard+Storyboards.swift */; };
+		A37BB4501E91A7F300A58A3B /* UIViewController+StoryboardIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37BB44C1E91A7F300A58A3B /* UIViewController+StoryboardIdentifier.swift */; };
 		D5684176F1C630B6B1115986 /* Pods_EventTracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8379D09139944DB75EA484A7 /* Pods_EventTracker.framework */; };
 /* End PBXBuildFile section */
 
@@ -77,10 +77,10 @@
 		A37BB4331E911C5500A58A3B /* UserDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
 		A37BB4351E915DAC00A58A3B /* EventUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventUtilities.swift; sourceTree = "<group>"; };
 		A37BB4371E9173CB00A58A3B /* EventTrackListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTrackListViewController.swift; sourceTree = "<group>"; };
-		A37BB4391E91A67600A58A3B /* GenericAlertViewPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenericAlertViewPresentable.swift; sourceTree = "<group>"; };
-		A37BB43A1E91A67600A58A3B /* StoryboardIdentifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardIdentifiable.swift; sourceTree = "<group>"; };
-		A37BB43B1E91A67600A58A3B /* UIStoryboard+Storyboards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+Storyboards.swift"; sourceTree = "<group>"; };
-		A37BB43C1E91A67600A58A3B /* UIViewController+StoryboardIdentifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+StoryboardIdentifier.swift"; sourceTree = "<group>"; };
+		A37BB4491E91A7F300A58A3B /* GenericAlertViewPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GenericAlertViewPresentable.swift; path = EventTracker/GenericAlertViewPresentable.swift; sourceTree = SOURCE_ROOT; };
+		A37BB44A1E91A7F300A58A3B /* StoryboardIdentifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StoryboardIdentifiable.swift; path = EventTracker/StoryboardIdentifiable.swift; sourceTree = SOURCE_ROOT; };
+		A37BB44B1E91A7F300A58A3B /* UIStoryboard+Storyboards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIStoryboard+Storyboards.swift"; path = "EventTracker/UIStoryboard+Storyboards.swift"; sourceTree = SOURCE_ROOT; };
+		A37BB44C1E91A7F300A58A3B /* UIViewController+StoryboardIdentifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIViewController+StoryboardIdentifier.swift"; path = "EventTracker/UIViewController+StoryboardIdentifier.swift"; sourceTree = SOURCE_ROOT; };
 		C6CA86507A42EE413768ACA5 /* Pods-EventTracker.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EventTracker.release.xcconfig"; path = "Pods/Target Support Files/Pods-EventTracker/Pods-EventTracker.release.xcconfig"; sourceTree = "<group>"; };
 		D315A32B3BDCAB6ED77CFD57 /* Pods-EventTracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EventTracker.debug.xcconfig"; path = "Pods/Target Support Files/Pods-EventTracker/Pods-EventTracker.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -189,10 +189,10 @@
 		A37BB40A1E8FCAAC00A58A3B /* storyBoard */ = {
 			isa = PBXGroup;
 			children = (
-				A37BB4391E91A67600A58A3B /* GenericAlertViewPresentable.swift */,
-				A37BB43A1E91A67600A58A3B /* StoryboardIdentifiable.swift */,
-				A37BB43B1E91A67600A58A3B /* UIStoryboard+Storyboards.swift */,
-				A37BB43C1E91A67600A58A3B /* UIViewController+StoryboardIdentifier.swift */,
+				A37BB4491E91A7F300A58A3B /* GenericAlertViewPresentable.swift */,
+				A37BB44A1E91A7F300A58A3B /* StoryboardIdentifiable.swift */,
+				A37BB44B1E91A7F300A58A3B /* UIStoryboard+Storyboards.swift */,
+				A37BB44C1E91A7F300A58A3B /* UIViewController+StoryboardIdentifier.swift */,
 			);
 			name = storyBoard;
 			path = ../DemoApp/DemoApp;
@@ -413,9 +413,9 @@
 				A37BB4301E91192000A58A3B /* EventGridFlowLayout.swift in Sources */,
 				A37BB4341E911C5500A58A3B /* UserDetailViewController.swift in Sources */,
 				A37BB4361E915DAC00A58A3B /* EventUtilities.swift in Sources */,
-				A37BB43F1E91A67600A58A3B /* UIStoryboard+Storyboards.swift in Sources */,
-				A37BB4401E91A67600A58A3B /* UIViewController+StoryboardIdentifier.swift in Sources */,
-				A37BB43E1E91A67600A58A3B /* StoryboardIdentifiable.swift in Sources */,
+				A37BB44F1E91A7F300A58A3B /* UIStoryboard+Storyboards.swift in Sources */,
+				A37BB4501E91A7F300A58A3B /* UIViewController+StoryboardIdentifier.swift in Sources */,
+				A37BB44E1E91A7F300A58A3B /* StoryboardIdentifiable.swift in Sources */,
 				A37BB3DE1E8FC6CD00A58A3B /* EventTracker.xcdatamodeld in Sources */,
 				A37BB3D81E8FC6CD00A58A3B /* ViewController.swift in Sources */,
 				A37BB4381E9173CB00A58A3B /* EventTrackListViewController.swift in Sources */,
@@ -424,7 +424,7 @@
 				A37BB4321E91193600A58A3B /* EventListFlowLayout.swift in Sources */,
 				A37BB4261E90383D00A58A3B /* EventListCell.swift in Sources */,
 				A37BB4191E901B2700A58A3B /* EventDetailModel.swift in Sources */,
-				A37BB43D1E91A67600A58A3B /* GenericAlertViewPresentable.swift in Sources */,
+				A37BB44D1E91A7F300A58A3B /* GenericAlertViewPresentable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
