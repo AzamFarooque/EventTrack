@@ -28,7 +28,7 @@ class EventTrackListViewController: UIViewController,UICollectionViewDelegate,UI
         // Do any additional setup after loading the view.
         
         
-        setupInitialLayout()
+       
         
         collectionView.backgroundColor = UIColor.black
         
@@ -40,6 +40,7 @@ class EventTrackListViewController: UIViewController,UICollectionViewDelegate,UI
     }
     
     override func viewDidAppear(_ animated: Bool) {
+       setupInitialLayout()
        retriveTrackList()
     }
     
@@ -82,11 +83,11 @@ class EventTrackListViewController: UIViewController,UICollectionViewDelegate,UI
     
     func retriveTrackList()
     {
+       
        let userName : String = UserDefaults.standard.object(forKey: "userName") as! String
         
-        print(userName)
-        //1
-        guard let appDelegate =
+       
+    guard let appDelegate =
             UIApplication.shared.delegate as? AppDelegate else {
                 return
         }
@@ -94,11 +95,11 @@ class EventTrackListViewController: UIViewController,UICollectionViewDelegate,UI
         let managedContext =
             appDelegate.persistentContainer.viewContext
         
-        //2
+       
         let fetchRequest =
             NSFetchRequest<NSManagedObject>(entityName: "Users")
         
-        //3
+        
         do {
             eventTrackListarray = try managedContext.fetch(fetchRequest)
             

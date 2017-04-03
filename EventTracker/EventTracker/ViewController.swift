@@ -91,7 +91,7 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
                 
                  if jsonObj != JSON.null {
                     
-                    print(jsonObj)
+                   
          
 
                    numberOfRow = jsonObj["Events"].count

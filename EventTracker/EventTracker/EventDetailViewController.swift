@@ -21,7 +21,6 @@ class EventDetailViewController: UIViewController,UIGestureRecognizerDelegate {
     var eventEntryString : String!
     
     let userName : String = UserDefaults.standard.object(forKey: "userName") as! String
-   
     var array: [NSManagedObject] = []
 
     
@@ -76,7 +75,7 @@ class EventDetailViewController: UIViewController,UIGestureRecognizerDelegate {
             let userNameInDb = event.value(forKeyPath: "userName") as? String
 
             
-            print(eventNameString!)
+           
             if(eventName == eventNameString && userNameInDb == userName )
             {
                 trackerButton.setImage(UIImage(named: "trackImage"), for: UIControlState.normal)
@@ -145,7 +144,7 @@ class EventDetailViewController: UIViewController,UIGestureRecognizerDelegate {
         {
         
        let userName : String = UserDefaults.standard.object(forKey: "userName") as! String
-            print(userName)
+           
             
         for (index, element) in array.enumerated() {
             
@@ -180,7 +179,10 @@ class EventDetailViewController: UIViewController,UIGestureRecognizerDelegate {
                 
                 if(isTrackListScreen == true)
                 {
-                self.navigationController?.popViewController(animated: true)
+                    let storyboard = UIStoryboard(storyboard: .Main)
+                    let controller : EventTrackListViewController = storyboard.instantiateViewController()
+                    self.navigationController?.pushViewController(controller, animated: false)
+  
                 }
                 
                 break
