@@ -1,10 +1,11 @@
 //
 //  UIViewController+StoryboardIdentifier.swift
-//  AzamMedia
+//  EventTracker
 //
-//  Created by Farooque on 20/02/17.
-//  Copyright © 2016 NDTV World Wide. All rights reserved.
+//  Created by Farooque on 02/04/17.
+//  Copyright © 2017 Farooque. All rights reserved.
 //
+
 
 import UIKit
 
