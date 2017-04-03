@@ -18,7 +18,6 @@
 		A37BB4121E8FFDEC00A58A3B /* Podfile in Resources */ = {isa = PBXBuildFile; fileRef = A37BB4111E8FFDEC00A58A3B /* Podfile */; };
 		A37BB4141E8FFFBE00A58A3B /* SwiftyJSON.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A37BB4131E8FFFBE00A58A3B /* SwiftyJSON.framework */; };
 		A37BB4161E90003500A58A3B /* jsonFile.json in Resources */ = {isa = PBXBuildFile; fileRef = A37BB4151E90003500A58A3B /* jsonFile.json */; };
-		A37BB4191E901B2700A58A3B /* EventDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37BB4181E901B2700A58A3B /* EventDetailModel.swift */; };
 		A37BB4261E90383D00A58A3B /* EventListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37BB4251E90383D00A58A3B /* EventListCell.swift */; };
 		A37BB42E1E91008900A58A3B /* EventDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37BB42D1E91008900A58A3B /* EventDetailViewController.swift */; };
 		A37BB4301E91192000A58A3B /* EventGridFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37BB42F1E91192000A58A3B /* EventGridFlowLayout.swift */; };
@@ -26,7 +25,6 @@
 		A37BB4341E911C5500A58A3B /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37BB4331E911C5500A58A3B /* UserDetailViewController.swift */; };
 		A37BB4361E915DAC00A58A3B /* EventUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37BB4351E915DAC00A58A3B /* EventUtilities.swift */; };
 		A37BB4381E9173CB00A58A3B /* EventTrackListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37BB4371E9173CB00A58A3B /* EventTrackListViewController.swift */; };
-		A37BB44D1E91A7F300A58A3B /* GenericAlertViewPresentable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37BB4491E91A7F300A58A3B /* GenericAlertViewPresentable.swift */; };
 		A37BB44E1E91A7F300A58A3B /* StoryboardIdentifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37BB44A1E91A7F300A58A3B /* StoryboardIdentifiable.swift */; };
 		A37BB44F1E91A7F300A58A3B /* UIStoryboard+Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37BB44B1E91A7F300A58A3B /* UIStoryboard+Storyboards.swift */; };
 		A37BB4501E91A7F300A58A3B /* UIViewController+StoryboardIdentifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A37BB44C1E91A7F300A58A3B /* UIViewController+StoryboardIdentifier.swift */; };
@@ -69,7 +67,6 @@
 		A37BB4111E8FFDEC00A58A3B /* Podfile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Podfile; sourceTree = "<group>"; };
 		A37BB4131E8FFFBE00A58A3B /* SwiftyJSON.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftyJSON.framework; path = "../../Library/Developer/Xcode/DerivedData/EventTracker-csafbapwbhezlpemysristhlljjm/Build/Products/Debug-iphonesimulator/SwiftyJSON/SwiftyJSON.framework"; sourceTree = "<group>"; };
 		A37BB4151E90003500A58A3B /* jsonFile.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = jsonFile.json; sourceTree = "<group>"; };
-		A37BB4181E901B2700A58A3B /* EventDetailModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailModel.swift; sourceTree = "<group>"; };
 		A37BB4251E90383D00A58A3B /* EventListCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventListCell.swift; sourceTree = "<group>"; };
 		A37BB42D1E91008900A58A3B /* EventDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventDetailViewController.swift; sourceTree = "<group>"; };
 		A37BB42F1E91192000A58A3B /* EventGridFlowLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventGridFlowLayout.swift; sourceTree = "<group>"; };
@@ -77,7 +74,6 @@
 		A37BB4331E911C5500A58A3B /* UserDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
 		A37BB4351E915DAC00A58A3B /* EventUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventUtilities.swift; sourceTree = "<group>"; };
 		A37BB4371E9173CB00A58A3B /* EventTrackListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EventTrackListViewController.swift; sourceTree = "<group>"; };
-		A37BB4491E91A7F300A58A3B /* GenericAlertViewPresentable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GenericAlertViewPresentable.swift; path = EventTracker/GenericAlertViewPresentable.swift; sourceTree = SOURCE_ROOT; };
 		A37BB44A1E91A7F300A58A3B /* StoryboardIdentifiable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = StoryboardIdentifiable.swift; path = EventTracker/StoryboardIdentifiable.swift; sourceTree = SOURCE_ROOT; };
 		A37BB44B1E91A7F300A58A3B /* UIStoryboard+Storyboards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIStoryboard+Storyboards.swift"; path = "EventTracker/UIStoryboard+Storyboards.swift"; sourceTree = SOURCE_ROOT; };
 		A37BB44C1E91A7F300A58A3B /* UIViewController+StoryboardIdentifier.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIViewController+StoryboardIdentifier.swift"; path = "EventTracker/UIViewController+StoryboardIdentifier.swift"; sourceTree = SOURCE_ROOT; };
@@ -124,11 +120,10 @@
 		A37BB3C91E8FC6CC00A58A3B = {
 			isa = PBXGroup;
 			children = (
-				A37BB41C1E9030D300A58A3B /* Cell */,
-				A37BB4171E901B0100A58A3B /* Model */,
 				A37BB4111E8FFDEC00A58A3B /* Podfile */,
+				A37BB41C1E9030D300A58A3B /* EventTrackerCell */,
 				A37BB40A1E8FCAAC00A58A3B /* storyBoard */,
-				A37BB3D41E8FC6CD00A58A3B /* EventTracker */,
+				A37BB3D41E8FC6CD00A58A3B /* EventTrackerViewController */,
 				A37BB3EC1E8FC6CD00A58A3B /* EventTrackerTests */,
 				A37BB3F71E8FC6CD00A58A3B /* EventTrackerUITests */,
 				A37BB3D31E8FC6CD00A58A3B /* Products */,
@@ -147,7 +142,7 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		A37BB3D41E8FC6CD00A58A3B /* EventTracker */ = {
+		A37BB3D41E8FC6CD00A58A3B /* EventTrackerViewController */ = {
 			isa = PBXGroup;
 			children = (
 				A37BB3D51E8FC6CD00A58A3B /* AppDelegate.swift */,
@@ -165,6 +160,7 @@
 				A37BB4151E90003500A58A3B /* jsonFile.json */,
 				A37BB4351E915DAC00A58A3B /* EventUtilities.swift */,
 			);
+			name = EventTrackerViewController;
 			path = EventTracker;
 			sourceTree = "<group>";
 		};
@@ -189,7 +185,6 @@
 		A37BB40A1E8FCAAC00A58A3B /* storyBoard */ = {
 			isa = PBXGroup;
 			children = (
-				A37BB4491E91A7F300A58A3B /* GenericAlertViewPresentable.swift */,
 				A37BB44A1E91A7F300A58A3B /* StoryboardIdentifiable.swift */,
 				A37BB44B1E91A7F300A58A3B /* UIStoryboard+Storyboards.swift */,
 				A37BB44C1E91A7F300A58A3B /* UIViewController+StoryboardIdentifier.swift */,
@@ -198,20 +193,12 @@
 			path = ../DemoApp/DemoApp;
 			sourceTree = "<group>";
 		};
-		A37BB4171E901B0100A58A3B /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				A37BB4181E901B2700A58A3B /* EventDetailModel.swift */,
-			);
-			name = Model;
-			sourceTree = "<group>";
-		};
-		A37BB41C1E9030D300A58A3B /* Cell */ = {
+		A37BB41C1E9030D300A58A3B /* EventTrackerCell */ = {
 			isa = PBXGroup;
 			children = (
 				A37BB4251E90383D00A58A3B /* EventListCell.swift */,
 			);
-			name = Cell;
+			name = EventTrackerCell;
 			sourceTree = "<group>";
 		};
 		B730C23D7B73FE8D9957EEA7 /* Pods */ = {
@@ -423,8 +410,6 @@
 				A37BB42E1E91008900A58A3B /* EventDetailViewController.swift in Sources */,
 				A37BB4321E91193600A58A3B /* EventListFlowLayout.swift in Sources */,
 				A37BB4261E90383D00A58A3B /* EventListCell.swift in Sources */,
-				A37BB4191E901B2700A58A3B /* EventDetailModel.swift in Sources */,
-				A37BB44D1E91A7F300A58A3B /* GenericAlertViewPresentable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
