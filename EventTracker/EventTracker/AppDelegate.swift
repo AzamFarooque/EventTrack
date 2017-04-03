@@ -20,8 +20,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let storyboard = UIStoryboard(storyboard: .Main)
         let leftViewController : UserDetailViewController = storyboard.instantiateViewController()
-        let nvc: UINavigationController = UINavigationController(rootViewController: leftViewController)
-        self.window?.rootViewController = nvc
+        let navigation: UINavigationController = UINavigationController(rootViewController: leftViewController)
+        self.window?.rootViewController = navigation
         self.window?.makeKeyAndVisible()
         
        

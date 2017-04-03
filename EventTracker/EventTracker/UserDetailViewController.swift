@@ -10,21 +10,24 @@ import UIKit
 import CoreData
 
 class UserDetailViewController: UIViewController {
+    
+    
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var proceedButton: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-  self.navigationController?.isNavigationBarHidden = true
-  self.proceedButton.layer.cornerRadius = 10
+    
         // Do any additional setup after loading the view.
-    }
+        
+        self.navigationController?.isNavigationBarHidden = true
+        self.proceedButton.layer.cornerRadius = 10
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-    @IBAction func proceedAction(_ sender: AnyObject) {
+    
+    // MARK : ProceedButtonAction
+
+      @IBAction func proceedAction(_ sender: AnyObject) {
         
         if (nameTextField.text?.isEmpty)!
         {
@@ -34,61 +37,23 @@ class UserDetailViewController: UIViewController {
         }
         else
         {
-        print(_model)
+       
         UserDefaults.standard.set(nameTextField.text, forKey: "userName")
         let storyboard = UIStoryboard(storyboard: .Main)
         let controller : ViewController = storyboard.instantiateViewController()
         self.navigationController?.pushViewController(controller, animated: true)
             
-        }
+      }
+      
     }
     
-    internal var _model: NSManagedObjectModel {
-        let model = NSManagedObjectModel()
-        
-        // Create the entity
-        let entity = NSEntityDescription()
-         entity.name = nameTextField.text
-        // Assume that there is a correct
-        // `CachedFile` managed object class.
-        entity.managedObjectClassName = String(describing: CachedURLResponse())
-        
-        // Create the attributes
-        var properties = Array<NSAttributeDescription>()
-        
-        let eventName = NSAttributeDescription()
-        eventName.name = "eventName"
-        eventName.attributeType = .stringAttributeType
-        eventName.isOptional = false
-        eventName.isIndexed = true
-        properties.append(eventName)
-        
-        let eventLocation = NSAttributeDescription()
-        eventLocation.name = "eventLocation"
-        eventLocation.attributeType = .stringAttributeType
-        eventLocation.isOptional = false
-        eventLocation.isIndexed = true
-        properties.append(eventLocation)
-        
-        let eventEntry = NSAttributeDescription()
-        eventEntry.name = "eventEntry"
-        eventEntry.attributeType = .stringAttributeType
-        eventEntry.isOptional = false
-        eventEntry.isIndexed = true
-        properties.append(eventEntry)
-        
-        
-        // Add attributes to entity
-        entity.properties = properties
-        
-        // Add entity to model
-        model.entities = [entity]
-        
-      
-        
-        // Done :]
-        return model
+    
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
     }
+
     
 
     /*

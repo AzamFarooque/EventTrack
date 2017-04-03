@@ -67,12 +67,17 @@ class EventDetailViewController: UIViewController,UIGestureRecognizerDelegate {
             print("Could not fetch. \(error), \(error.userInfo)")
         }
         
+        let userName : String = UserDefaults.standard.object(forKey: "userName") as! String
+        
         for (index, element) in array.enumerated() {
             
             let event = array[index]
             let eventName = event.value(forKeyPath: "eventName") as? String
+            let userNameInDb = event.value(forKeyPath: "userName") as? String
+
+            
             print(eventNameString!)
-            if(eventName == eventNameString)
+            if(eventName == eventNameString && userNameInDb == userName )
             {
                 trackerButton.setImage(UIImage(named: "trackImage"), for: UIControlState.normal)
                 break
@@ -113,8 +118,6 @@ class EventDetailViewController: UIViewController,UIGestureRecognizerDelegate {
     @IBAction func eventTrackAction(_ sender: AnyObject) {
         
         
-        
-        //1
         guard let appDelegate =
             UIApplication.shared.delegate as? AppDelegate else {
                 return
@@ -141,12 +144,16 @@ class EventDetailViewController: UIViewController,UIGestureRecognizerDelegate {
         else
         {
         
+       let userName : String = UserDefaults.standard.object(forKey: "userName") as! String
+            print(userName)
+            
         for (index, element) in array.enumerated() {
             
             let event = array[index]
             let eventName = event.value(forKeyPath: "eventName") as? String
+            let userNameInDb = event.value(forKeyPath: "userName") as? String
             
-            if(eventName == eventNameString)
+            if(eventName == eventNameString && userNameInDb == userName)
             {
                 
                  isTracked = true
@@ -195,7 +202,8 @@ class EventDetailViewController: UIViewController,UIGestureRecognizerDelegate {
     
     func save() {
         
-       
+       let userName : String = UserDefaults.standard.object(forKey: "userName") as! String
+        
         guard let appDelegate =
             UIApplication.shared.delegate as? AppDelegate else {
                 return
@@ -217,6 +225,7 @@ class EventDetailViewController: UIViewController,UIGestureRecognizerDelegate {
         event.setValue(eventNameString, forKeyPath: "eventName")
         event.setValue(eventLocationString, forKeyPath: "eventLocation")
         event.setValue(eventEntryString, forKeyPath: "eventEntry")
+        event.setValue(userName, forKey: "userName")
         
         
         // 4

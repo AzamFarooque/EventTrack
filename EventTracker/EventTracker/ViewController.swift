@@ -20,34 +20,28 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
      var eventDetailArray = [String]()
      var eventImageArray = [String]()
     
-    
-    
-    
-    
     let gridFlowLayout = EventGridFlowLayout()
     /// Flow layout that displays cells with a List layout, like in a tableView
     let listFlowLayout = EventListFlowLayout()
     var isGridFlowLayoutUsed: Bool = false
     
-
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         // Do any additional setup after loading the view, typically from a nib.
         parseJSON()
-        
         setupInitialLayout()
         collectionView.backgroundColor = UIColor.black
        
-        
+        // Right to Left swipe Action
         let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(ViewController.leftSwipe))
         swipeLeft.direction = UISwipeGestureRecognizerDirection.left
         self.view.addGestureRecognizer(swipeLeft)
 
-        
-        }
+    }
     
-      
+     // MARK : - Left swipe action
     func leftSwipe()
     {
         let storyboard = UIStoryboard(storyboard: .Main)
@@ -58,6 +52,7 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         self.present(navController, animated:true, completion: nil)
 
     }
+    // MARK : - Changing list to Grid or viceversa
     
     @IBAction func listOrGridAction(_ sender: AnyObject) {
         
@@ -85,6 +80,7 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         
     }
     
+    // MARK : - Parson JSON from jsonFile
     
     func parseJSON()
     {
@@ -132,12 +128,14 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         
     }
     
+    // MARK : - Setting Initial Layout For EventListing
+    
     func setupInitialLayout() {
         isGridFlowLayoutUsed = true
         collectionView.collectionViewLayout = gridFlowLayout
     }
 
-    
+    // MARK : - CollectionView Deleagtes
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
     
@@ -153,8 +151,6 @@ class ViewController: UIViewController,UICollectionViewDelegate,UICollectionView
         
     let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "EventListCell", for: indexPath as IndexPath) as! EventListCell
         
-//        cell.layer.borderColor = UIColor.black.cgColor
-//        cell.layer.borderWidth = 0.5
         cell.backgroundColor = UIColor.white
         
         if (indexPath.row % 2 == 0)

@@ -15,7 +15,10 @@ class EventTrackListViewController: UIViewController,UICollectionViewDelegate,UI
     /// Flow layout that displays cells with a List layout, like in a tableView
     let listFlowLayout = EventListFlowLayout()
     var isGridFlowLayoutUsed: Bool = false
-     var eventTrackListarray: [NSManagedObject] = []
+    var eventTrackListarray: [NSManagedObject] = []
+    var eventuserTrackListarray: [NSManagedObject] = []
+    var array: [NSManagedObject] = []
+    
 
     @IBOutlet weak var collectionView: UICollectionView!
 
@@ -53,8 +56,8 @@ class EventTrackListViewController: UIViewController,UICollectionViewDelegate,UI
                 self.collectionView.setCollectionViewLayout(self.gridFlowLayout, animated: true)
             }
             
-        }
-        else
+         }
+           else
         {
             isGridFlowLayoutUsed = false
             
@@ -63,12 +66,8 @@ class EventTrackListViewController: UIViewController,UICollectionViewDelegate,UI
                 self.collectionView.setCollectionViewLayout(self.listFlowLayout, animated: true)
             }
             
-            
         }
-        
     }
-    
-
     
     func rightSwipe()
     {
@@ -83,8 +82,6 @@ class EventTrackListViewController: UIViewController,UICollectionViewDelegate,UI
     
     func retriveTrackList()
     {
-        
-        
        let userName : String = UserDefaults.standard.object(forKey: "userName") as! String
         
         print(userName)
@@ -104,9 +101,28 @@ class EventTrackListViewController: UIViewController,UICollectionViewDelegate,UI
         //3
         do {
             eventTrackListarray = try managedContext.fetch(fetchRequest)
+            
+              for (index, element) in eventTrackListarray.enumerated() {
+                
+                let eventDetail = eventTrackListarray[index]
+                
+                let userNameInDb = eventDetail.value(forKeyPath: "userName") as? String
+                
+                if(userNameInDb==userName)
+                {
+                    eventuserTrackListarray += [eventDetail]
+                    let unique = Array(Set(eventuserTrackListarray))
+                    eventuserTrackListarray = unique
+                    
+                }
+                
+            }
+            
+            
         } catch let error as NSError {
             print("Could not fetch. \(error), \(error.userInfo)")
         }
+         array = eventuserTrackListarray
          collectionView.delegate = self
          collectionView.dataSource = self
          collectionView.reloadData()
@@ -115,7 +131,7 @@ class EventTrackListViewController: UIViewController,UICollectionViewDelegate,UI
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return eventTrackListarray.count
+        return array.count
     }
     
     private func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
@@ -127,7 +143,7 @@ class EventTrackListViewController: UIViewController,UICollectionViewDelegate,UI
        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "EventListCell", for: indexPath as IndexPath) as! EventListCell
         
-         let eventDetail = eventTrackListarray[indexPath.row]
+         let eventDetail = array[indexPath.row]
         
         //        cell.layer.borderColor = UIColor.black.cgColor
         //        cell.layer.borderWidth = 0.5
@@ -154,7 +170,7 @@ class EventTrackListViewController: UIViewController,UICollectionViewDelegate,UI
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        let eventDetail = eventTrackListarray[indexPath.row]
+        let eventDetail = array[indexPath.row]
         let storyboard = UIStoryboard(storyboard: .Main)
         let controller : EventDetailViewController = storyboard.instantiateViewController()
         
@@ -163,11 +179,7 @@ class EventTrackListViewController: UIViewController,UICollectionViewDelegate,UI
         self.navigationController?.pushViewController(controller, animated: true)
     }
     
-
-
-
-
-
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
