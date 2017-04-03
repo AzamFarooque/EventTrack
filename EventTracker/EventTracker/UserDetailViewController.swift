@@ -12,8 +12,12 @@ import CoreData
 class UserDetailViewController: UIViewController {
     
     
+    @IBOutlet weak var nameTextFieldLeftConstraints: NSLayoutConstraint!
     @IBOutlet weak var nameTextField: UITextField!
     @IBOutlet weak var proceedButton: UIButton!
+    @IBOutlet weak var nameTextFieldRightConstraints: NSLayoutConstraint!
+    @IBOutlet weak var proceedButtonLeftConstraint: NSLayoutConstraint!
+    @IBOutlet weak var proceedButtonRightConstraint: NSLayoutConstraint!
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -22,6 +26,16 @@ class UserDetailViewController: UIViewController {
         
         self.navigationController?.isNavigationBarHidden = true
         self.proceedButton.layer.cornerRadius = 10
+        
+        nameTextField.layer.borderColor = UIColor(red: 34/255, green: 96/255, blue: 125/255, alpha: 1).cgColor
+        nameTextField.layer.borderWidth = 2
+        if(self.view.frame.size.width > 714)
+        {
+            nameTextFieldRightConstraints.constant = 150
+            nameTextFieldLeftConstraints.constant = 150
+            proceedButtonRightConstraint.constant = 150
+            proceedButtonLeftConstraint.constant = 150
+        }
 
     }
     
