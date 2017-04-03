@@ -17,9 +17,6 @@ class EventTrackListViewController: UIViewController,UICollectionViewDelegate,UI
     var isGridFlowLayoutUsed: Bool = false
     var eventTrackListarray: [NSManagedObject] = []
     var eventuserTrackListarray: [NSManagedObject] = []
-    var array: [NSManagedObject] = []
-    
-
     @IBOutlet weak var collectionView: UICollectionView!
 
     override func viewDidLoad() {
@@ -27,25 +24,22 @@ class EventTrackListViewController: UIViewController,UICollectionViewDelegate,UI
 
         // Do any additional setup after loading the view.
         
-        
-       
-        
         collectionView.backgroundColor = UIColor.black
         
+        // Right to Left swipe Action
         let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(EventTrackListViewController.rightSwipe))
         swipeRight.direction = UISwipeGestureRecognizerDirection.right
         self.view.addGestureRecognizer(swipeRight)
         
        
     }
-    
+    // MARK : - Method ViewDidAppear
     override func viewDidAppear(_ animated: Bool) {
        setupInitialLayout()
        retriveTrackList()
     }
     
-
-    
+    // MARK : - Changing list to Grid or viceversa
     @IBAction func listOrGridAction(_ sender: AnyObject) {
         
         if(sender.selectedSegmentIndex == 0)
@@ -69,25 +63,26 @@ class EventTrackListViewController: UIViewController,UICollectionViewDelegate,UI
             
         }
     }
-    
+    // MARK : - Right swipe action
     func rightSwipe()
     {
-        self.dismiss(animated: true, completion: nil)
+     self.dismiss(animated: true, completion: nil)
         
     }
-    
+     // MARK : - Setting Initial Layout For EventListing
     func setupInitialLayout() {
         isGridFlowLayoutUsed = true
         collectionView.collectionViewLayout = gridFlowLayout
     }
     
+    // MARK : Retrive EventList for unique User
+    
     func retriveTrackList()
     {
        
-       let userName : String = UserDefaults.standard.object(forKey: "userName") as! String
-        
-       
-    guard let appDelegate =
+    let userName : String = UserDefaults.standard.object(forKey: "userName") as! String
+    
+        guard let appDelegate =
             UIApplication.shared.delegate as? AppDelegate else {
                 return
         }
@@ -123,16 +118,17 @@ class EventTrackListViewController: UIViewController,UICollectionViewDelegate,UI
         } catch let error as NSError {
             print("Could not fetch. \(error), \(error.userInfo)")
         }
-         array = eventuserTrackListarray
+        
          collectionView.delegate = self
          collectionView.dataSource = self
          collectionView.reloadData()
     }
     
+    // MARK : CollectionView Delegate
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return array.count
+        return eventuserTrackListarray.count
     }
     
     private func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
@@ -144,11 +140,8 @@ class EventTrackListViewController: UIViewController,UICollectionViewDelegate,UI
        
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "EventListCell", for: indexPath as IndexPath) as! EventListCell
         
-         let eventDetail = array[indexPath.row]
-        
-        //        cell.layer.borderColor = UIColor.black.cgColor
-        //        cell.layer.borderWidth = 0.5
-        cell.backgroundColor = UIColor.white
+         let eventDetail = eventuserTrackListarray[indexPath.row]
+         cell.backgroundColor = UIColor.white
         
         if (indexPath.row % 2 == 0)
         {
@@ -171,7 +164,7 @@ class EventTrackListViewController: UIViewController,UICollectionViewDelegate,UI
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
-        let eventDetail = array[indexPath.row]
+        let eventDetail = eventuserTrackListarray[indexPath.row]
         let storyboard = UIStoryboard(storyboard: .Main)
         let controller : EventDetailViewController = storyboard.instantiateViewController()
         

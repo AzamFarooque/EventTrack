@@ -22,9 +22,7 @@ class EventDetailViewController: UIViewController,UIGestureRecognizerDelegate {
     
     let userName : String = UserDefaults.standard.object(forKey: "userName") as! String
     var array: [NSManagedObject] = []
-
     
-
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var eventEntry: UILabel!
     @IBOutlet weak var eventLocation: UILabel!
@@ -34,8 +32,7 @@ class EventDetailViewController: UIViewController,UIGestureRecognizerDelegate {
 
         // Do any additional setup after loading the view.
         
-       
-
+    
         
         eventNameString = eventDetailDictionary.object(forKey: "Event Name") as! String?
         eventLocationString = eventDetailDictionary.object(forKey: "Event Location") as! String?
@@ -45,7 +42,16 @@ class EventDetailViewController: UIViewController,UIGestureRecognizerDelegate {
         eventLocation.text = "Event Location : "+eventLocationString!
         eventEntry.text = "Event Entry : "+eventEntryString!
         
+         // Right to Left swipe Action
         
+        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(ViewController.leftSwipe))
+        swipeLeft.direction = UISwipeGestureRecognizerDirection.left
+        self.view.addGestureRecognizer(swipeLeft)
+
+    }
+    
+     // MARK : - Method ViewDidAppear
+     override func viewDidAppear(_ animated: Bool) {
         
         guard let appDelegate =
             UIApplication.shared.delegate as? AppDelegate else {
@@ -73,25 +79,18 @@ class EventDetailViewController: UIViewController,UIGestureRecognizerDelegate {
             let event = array[index]
             let eventName = event.value(forKeyPath: "eventName") as? String
             let userNameInDb = event.value(forKeyPath: "userName") as? String
-
             
-           
+            
+            
             if(eventName == eventNameString && userNameInDb == userName )
             {
                 trackerButton.setImage(UIImage(named: "trackImage"), for: UIControlState.normal)
                 break
             }
         }
-
-        
-        
-        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(ViewController.leftSwipe))
-        swipeLeft.direction = UISwipeGestureRecognizerDirection.left
-        self.view.addGestureRecognizer(swipeLeft)
-
     }
     
-    
+     // MARK : - Left swipe action
     func leftSwipe()
     {
         let storyboard = UIStoryboard(storyboard: .Main)
@@ -101,19 +100,13 @@ class EventDetailViewController: UIViewController,UIGestureRecognizerDelegate {
         self.present(navController, animated:true, completion: nil)
         
     }
-
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-    
+    // MARK : - Backbutton Action
     @IBAction func backAction(_ sender: AnyObject) {
      
           self.navigationController?.popViewController(animated: true)
         
     }
-
+     // MARK : - For saving and removing event in Core Data
     @IBAction func eventTrackAction(_ sender: AnyObject) {
         
         
@@ -202,6 +195,8 @@ class EventDetailViewController: UIViewController,UIGestureRecognizerDelegate {
         
         }
     
+    // MARK : Saving Event Method
+    
     func save() {
         
        let userName : String = UserDefaults.standard.object(forKey: "userName") as! String
@@ -241,7 +236,11 @@ class EventDetailViewController: UIViewController,UIGestureRecognizerDelegate {
         }
         }
     
-    
+     override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+
     
     
     /*
