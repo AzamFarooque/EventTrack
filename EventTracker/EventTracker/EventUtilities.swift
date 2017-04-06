@@ -14,6 +14,7 @@ import CoreData
 final class EventUtilities
 {
     
+    @available(iOS 10.0, *)
     static func savedUser(user : String)    {
         
         let appDelegate = UIApplication.shared.delegate as! AppDelegate
