@@ -4,7 +4,7 @@
         <attribute name="eventEntry" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="eventLocation" optional="YES" attributeType="String" syncable="YES"/>
         <attribute name="eventName" optional="YES" attributeType="String" syncable="YES"/>
-        <attribute name="userName" optional="YES" attributeType="String" syncable="YES"/>
+        <attribute name="userName" attributeType="String" indexed="YES" syncable="YES"/>
     </entity>
     <elements>
         <element name="Users" positionX="-54" positionY="-9" width="128" height="105"/>
